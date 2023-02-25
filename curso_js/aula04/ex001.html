@@ -21,11 +21,68 @@
 
     <script> /*comandos em javascript sempre são feitas em letras minúsculas, mas há exceções.*/
 
-        window.alert('Olá, mundo! Está é minha primeira mensagem'); /* cria um pop-up com a mensagem dentro das aspas*/ /* As opções que aparecem de interação é somente 'ok' */ /*possível omitir a parte do window.*/
+        window.alert('Olá, mundo! Está é minha primeira mensagem'); //cria um pop-up com a mensagem dentro das aspas
+         //As opções que aparecem de interação é somente 'ok'
+         //possível omitir a parte do window.
 
         window.confirm('Você está gostando de JS?') /*Cria um pop-up -> há opções de 'ok' e 'cancelar'*/
 
         window.prompt('Qual é o seu nome?') /*cria um textbox na qual o usuário poderá escrever. Podendo clicar em 'ok' e 'cancelar' */
+
+
+        /*
+                VARIÁVEIS
+            
+            Para atribuir um valor a uma determinada variável deve-se utilizar  =  -> ler-se 'recebe'
+
+            Uma variável poderá receber somente um valor, caso outro valor seja atribuido a mesma variável, o valor que prevalecerá será o ultimo atribuido.
+            Exemplo:
+                        var n1 = carro1
+                    (variável n1 recebe valor carro1)
+
+            Strings podem ser utilizadas como variável utilizando "" ou '' ou ``.
+            Exemplo:
+                       var n2 = "olá, mundo"
+                    (variável n1 recebe string "olá, mundo")
+
+            
+            Os nomes utilizados em variáveis são chamados de IDENTIFICADORES, havendo regras para nomeação desses indentificadores:
+
+            1° Podem começar com LETRA, $ ou _
+            2° Não podem começar com números
+            3° É possível utilizar letras e números
+            4° É possível utilizar acentos e símbolos
+            5° Não podem conter espaço (o espaço pode ser substituído pelo _ )
+            6° Não podem ser palavras reservadas (alert, como é um comando, não pode ser utilizada como variável)
+
+
+
+                DICAS PARA ESCOLHER NOMES DE IDENTIFICADORES
+                
+            1° Maiúsculas e Minúsculas fazem diferença
+            2° Tentar utilizar nomes coerentes para as variáveis
+            3° Evitar formar variáveis com letras de alfabeto (var a, var b, var c) ou numérico (var n1, va   b2, var c5). Tente ser sempre coerentes.
+                
+                
+                DATA TYPES
+
+            Os tipos primitivos primodiais são:
+
+                Numbers: 1, 2.5, 7, -15,9
+                    infinity:
+                    null:
+                Strings: "Google", 'Maria', `curso em video`
+                Boolean: True or False
+                null:
+                undefined:
+                object:
+                    array:
+                function:
+
+        Para saber qual DATA TYPE tem uma variável basta digitar o comando -> typeof nome_variável
+            
+            */
+
 
     </script>
 </body>
