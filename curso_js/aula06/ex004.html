@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        var idade = Number(window.prompt('Escreva sua idade: '))
+
+        document.writeln(`Olá, ${nome}! Seu nome possue ${nome.length} letras!`) //Escreve no body e pula linha
+        document.writeln(`Seu nome me maiusculo é: ${nome.toUpperCase()}`)  
+        document.writeln(`Seu nome em minúsculo é: ${nome.toLowerCase()}`) //escreve no body e não pula linha
+
+        document.writeln(`Sua idade é ${idade.toFixed(2).replace('.', ',')}`) //.toFixed -> Vai escrever a idade com 2 casas decimais
+        //.replace('', '') -> vai trocar uma coisa por outra 
+
+
+
+
+        /*                             ATRIBUTOS
+                    
+                    soma.length -> mostra quantas caracteres possue minha variável
+                    soma.toUpperCase() -> Tudo para letra maiusculas
+                    soima.toLowerCase() -> Vai jogar para lestras minúsculas */
+    </script>
+</body>
+</html>
