@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        input{
+            width: 75px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Somando valores</h1>
+    
+    <label for="inumber1"></label>
+    <input type="number" name="number" id="inumber1">
+
+    <label for="inumber2">+</label>
+    <input type="number" name="number2" id="inumber2">
+
+    <input type="button" value="Somar" id="alo">
+
+    <div id="res">
+    </div>
+
+    <script>
+        var botaosomar = window.document.querySelector('input#alo')
+        botaosomar.addEventListener('click', somar)
+
+        function somar(){
+        var txtn1 = window.document.getElementById('inumber1')
+        var txtn2 = window.document.querySelector('input#inumber2')
+        var res = window.document.querySelector('div#res')
+        var numero1 = Number(txtn1.value)//O resultado do input virá em string, é necessário passar o valor para number
+        var numero2 = Number(txtn2.value)
+        var soma = numero1 + numero2
+        res.innerHTML = `O resultado da soma entre os números ${numero1} e ${numero2} é igual a: ${soma}`
+    }
+
+
+    </script>
+
+</body>
+</html>

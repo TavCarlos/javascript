@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="itxtvel">Velocidade: </label>
+    <input type="number" name="txtvel" id="itxtvel"> Km/h
+
+    <input type="button" value="Submit" id="isubmit">
+
+    <div id="resultado"></div>
+    
+    
+    <script>
+
+        var submit = window.document.querySelector("input#isubmit")         
+        submit.addEventListener('click', calcvel)
+
+        function calcvel(){
+
+            var txtvel = window.document.querySelector('input#itxtvel')
+            var vel = Number(txtvel.value)
+            var result = window.document.querySelector('div#resultado')
+            result.innerHTML = `Sua velocidade é de ${vel}Km/h.`
+
+            if (vel <= 60){
+            result.innerHTML += " <p> Você está dentro do limite de velocidade! </p>"
+            result.innerHTML += " <p> Dirija sempre utilizando o cinto de segurança.</p>" //concatenando strings
+            } else {
+            result.innerHTML += " <p> Você está acima do limite de velocidade. Multado! </p>"
+            }
+        }
+    </script>
+</body>
+</html>

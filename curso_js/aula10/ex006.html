@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 1.2em arial;
+            background-color: #0faa0f;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area">
+        INTERAJA...
+    </div>
+
+    <script>
+          var area = window.document.getElementById("area")
+
+          area.addEventListener('click', clicar)//evento, função
+          area.addEventListener('mouseover', entrar)
+          area.addEventListener('mouseout', sair)
+          //quando o evento ocorrer, a função será chamada
+          
+
+        function clicar() {
+            area.innerText = 'CLICOU!'
+            area.style.background = 'red'
+        }
+
+        function entrar() {
+            area.innerText = 'ENTROU!'
+
+        }
+
+        function sair(){
+            area.innerText = 'SAIU!'
+            area.style.background = '#0faa0f'
+        }
+
+
+
+        /* FUNÇÕES { }
+        
+        
+        function nome_função(){
+
+        }
+
+
+        As linhas de códigos que são colocadas dentro da função vão ocorrer quando um determinado evento acontecer.
+
+        Exemplo: um bloco com 10 linhas de programação só vai ocorrer quando eu clicar dentro da div.
+
+        -> Quando uma variável está dentro de uma função, não consigo utilizar ela fora por causa do scolpo local.
+
+
+        -> se ocorrer um erro -> abrir o especionar do navegador que ele dirá qual erro ocorreu
+        */
+
+    </script>
+
+</body>
+</html>
