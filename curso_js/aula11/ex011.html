@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: lightblue;
+            width: 300px;
+            height: 150px;
+            padding: 0px 40px 40px 40px;
+            border-radius: 6%;
+            border: 1px solid black;
+           
+        }
+
+        h1{
+            margin: 30px 0px 10px 0px;
+            text-align: center;
+        }
+
+        label{
+            margin-left: 20px;
+        }
+
+        input#isubmit{
+            display: block;
+            margin-top: 10px;
+            margin-left: 20px;    
+        }
+
+        p{
+            text-align: center;
+            font-size: 1.2em;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Nacionalidade</h1>
+        <label for="inac">País: </label>
+        <input type="text" name="nac" id="inac" required>
+        <input type="submit" value="Submit" id="isubmit">
+        <p></p>
+    </div>
+
+    <script>
+
+        var submit = window.document.querySelector("input#isubmit")
+            submit.addEventListener('click', nacional)
+
+        function nacional(){
+
+            var txtnac = window.document.querySelector('input#inac')
+            var nac = (txtnac.value)
+            var res = window.document.getElementsByTagName('p')[0]
+
+            if (nac == 'brasil' || nac == 'Brasil' || nac == 'brazil' || nac == 'Brazil'){
+                res.innerHTML = "Você é <strong>Brasileiro</strong>!"
+            } else {
+                res.innerHTML = "Você é <strong>Estrangeiro</strong>!"
+            }
+        }
+    </script>
+
+</body>
+</html>
