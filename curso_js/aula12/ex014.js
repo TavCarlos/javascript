@@ -40,3 +40,4 @@ switch(diaSem){ //Caso var diaSem =
         console.log('Erro! Dia inválido.')
         break
 }
+
