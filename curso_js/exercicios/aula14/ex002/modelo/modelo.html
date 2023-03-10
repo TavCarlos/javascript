@@ -17,11 +17,27 @@
     <main>
         <section>
             <div>
+            
                 <label for="inumero">Número: </label>
                 <input type="number" name="numero" id="inumero">
+                
+
+                
+                    <div>
+                        <label for="imult">Multiplicação: </label>
+                        <input type="radio" name="tabuada" id="imult" checked>
+                    </div>
+                
+
+                    <div>
+                        <label for="idiv">Divisão: </label>
+                        <input type="radio" name="tabuada" id="idiv">
+                    </div>
+                
+
                 <input type="submit" value="Gerar tabuada" id="gerador">
             </div>
-            <div>
+            <div id="saida">
                 <p id="res"></p>
             </div>
         </section>

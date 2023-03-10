@@ -26,6 +26,11 @@ section{
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.493);
 }
 
+div#saida p{
+    padding: 5px;
+    text-align: center;
+}
+
 footer{
     color: white;
     text-align: center;
