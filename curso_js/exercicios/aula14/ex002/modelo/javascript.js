@@ -1,32 +1,36 @@
 var submit = window.document.querySelector('input#gerador')
 submit.addEventListener('click', tabuada)
 
-function tabuada(){
-    var txt = window.document.querySelector('input#inumero')
+function tabuada(){ //Checando se o usuário colocou texto
+    let txt = window.document.querySelector('input#inumero')
     if (txt.value.length == 0){
         alert('[ERRO] verifique os dados e tente novamente!')
     }else{
-        var numero = Number(txt.value)
-        var p = document.createElement("p")
+        let numero = Number(txt.value)
+        let p = document.createElement("p") //paragráfo criado com javascript
         //p.style.textAlign = "left"
-        var operador = window.document.getElementsByName('tabuada')
-        var res = document.getElementsByTagName('p')[0]
+        let operador = window.document.getElementsByName('tabuada')
+        let res = document.getElementsByTagName('p')[0] //parágrafo já existente no HTML
 
+
+        //Multiplicação
         if (operador[0].checked){
             res.innerHTML = `Multiplicação de: ${numero}`
 
-            for (var contador = 1; contador <= 10; contador++ ){ 
+            for (let contador = 1; contador <= 10; contador++ ){ 
+                
                 p.innerHTML += `${contador} x ${numero} = ${contador*numero} <br>`
             }
         
+            //divisão
         } else{
             res.innerHTML = `Divisão de: ${numero}`
 
-            for (var contador = 1; contador <=10; contador++){
-                var multi = contador*numero
+            for (let contador = 1; contador <=10; contador++){
+                let multi = contador*numero
                 p.innerHTML += `${multi} / ${numero} = ${contador} <br>`
             }
         }
-        res.appendChild(p) 
+        res.appendChild(p)
     }
 }

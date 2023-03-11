@@ -8,9 +8,9 @@ window.addEventListener('DOMContentLoaded', loading) //aciona a função ao atua
 
 
 function loading(){
-    var msg = window.document.querySelector('div#msg')
-    var img = window.document.querySelector ('img#imagem')
-   
+    let msg = window.document.querySelector('div#msg') 
+    let img = window.document.querySelector ('img#imagem')
+   //a diferença de let e var é justamente o escopo. Variáveis dentro de funções só existem dentro das funções, quando o código termina de ler essa função aquela variável some. Diferentemente de variáveis que estão fora de função que não somem. o uso do let é um indicativo de que a variável só irá funcionar naquele bloco.
     
     msg.innerHTML = `Agora são ${hora} horas e ${minuto} minutos!`
     
