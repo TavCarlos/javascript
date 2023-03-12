@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #318ba8;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #000000a1;
+    box-shadow: 4px 4px 10px #00000050;
+}
+
+
+input#iacabar[type=submit]{
+    display: block;
+    margin-top: 5px;
+}
+
+
+footer{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
