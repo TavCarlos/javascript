@@ -30,6 +30,9 @@ input#iacabar[type=submit]{
     margin-top: 5px;
 }
 
+select#selval{
+    width: 150px;
+}
 
 footer{
     color: white;

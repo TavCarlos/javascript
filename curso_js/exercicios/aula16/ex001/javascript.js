@@ -14,21 +14,21 @@ function adicionar(){
     let txt = document.querySelector('input#inumero')
     let numero = Number(txt.value)
 
-    let checar = arrayanalisar(numero)
+    let checar = arrayanalisar(numero/*,val*/)
 
     if(numero < 1 || numero > 100 || checar == "1"){
         alert('Valor inválido ou já encontrado na lista.')
     } else{
-        numeros.push(numero)
-        let maior = 0
-        let val = document.querySelector('select#selval')
-        let item = document.createElement('option')
-        item.text = `Valor ${numero} adicionado`
-        val.appendChild(item)
-        out.appendChild(paragrafo)
-        paragrafo.innerHTML = ''
-
+         let val = document.querySelector('select#selval')
+         let item = document.createElement('option')
+         numeros.push(numero)
+         item.text = `Valor ${numero} adicionado`
+         val.appendChild(item)
+         out.appendChild(paragrafo)
+         paragrafo.innerHTML = ''
     }
+    txt.value = '' // ao adicionar um número, a caixa do input:number fica vazia
+    txt.focus() //o cursor volta para o input:number
 }
 
 function arrayanalisar(n){
@@ -44,6 +44,13 @@ function arrayanalisar(n){
         return "0"
     }
 }
+
+/*function arrayanalisar(n, l){
+    if (l.indexOf(Number(n)) != -1 {
+        return true
+    } else
+        return false
+} */
 
 function finalizar(){
     let tot = numeros.length
