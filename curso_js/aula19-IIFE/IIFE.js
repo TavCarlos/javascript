@@ -1,4 +1,4 @@
-//IFFE - Immediately Invoked Function Expression
+//IIFE - Immediately Invoked Function Expression
 
 const NomeForaScopo = (function (){
     let nome = 'Carlos'//variável nome não é acessível fora do scopo, sendo necessário atribuir a function a uma const
