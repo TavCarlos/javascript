@@ -1,3 +1,22 @@
+function FnCapitalizarNovo(colecao, atributo){
+
+    if (typeof colecao[0] == 'object' ){
+        var resultado = colecao.map(function (obj){ //função vai receber os objetos da colecao como atributo
+            var LetraInicial =
+                obj[atributo].charAt(0).toUpperCase();//objeto[propriedade_nome]; -> o 'atrib' -> index.js
+            var restoTexto =
+                obj[atributo].slice(1);
+            
+            obj[atributo] = LetraInicial + restoTexto
+
+            return obj; //vai retornar o objeto modificado para a variável 'resultado'
+        }); //.map() é um metodo que irá correr por todo o array
+    }
+    console.log(resultado)
+}
+
+
+
 function FnCaptalizar(vetor){
     var modificado = []
 
@@ -25,15 +44,11 @@ const FnCaixaAlta = (vetor) => {
     return modificador;
 }
 
-//Só é possível exportar um default. Ou seja, não consigo exporta a função captalizar a ordenar através do: 'export deafault'. Nisso, é possível criar um objeto que encapsula funcionalidades.
 
 export default {
     captalizar: FnCaptalizar,
+    capitalizarNovo: FnCapitalizarNovo, 
     ordenar: FnOrdenar,
     caixaAlta: FnCaixaAlta
-    /*O que está a esquerda dos dois pontos é chamado de chave ou propriedade.
-    O que está a direita dos dois pontos é um valor
-    O nome que está a esquerda é que estará visível para a importação no index.js.*/
-
 };
 
