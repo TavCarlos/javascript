@@ -1,4 +1,4 @@
-//Modularização -> 
+//Modularização -> Ato de dividir uma aplicação; separando a aplicação em módulos
 
 import modificador from "./modificador.js" // vai importa o objeto de exportação default{}; como no exemplo, há duas funções que é importada.
 
