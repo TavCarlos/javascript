@@ -23,8 +23,6 @@ function FnCapitalizarNovo(colecao, atributo){
             return array
         });
     }
-    console.log(colecao[1])
-    console.log(resultado)
 }
 
 
