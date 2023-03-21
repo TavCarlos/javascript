@@ -8,6 +8,7 @@ const aprovacao = (colecao, media, status) =>{
     console.log(resultado)
 }
 
+
 export default{
     aprovacao: aprovacao
 };
